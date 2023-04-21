@@ -1,0 +1,23 @@
+<div *ngIf="isPsyLoaded" class="psy-profile">
+
+  <h1>PsyPage</h1>
+
+  <div style="padding-top: 2rem" class="row">
+    <div class="col">
+      <img class="profile-image" [src]="previewImgURL || formatImage(psyProfileImage) || 'https://png.pngtree.com/png-clipart/20201208/original/pngtree-cartoon-family-avatar-face-picture-kid-png-image_5519203.jpg'" alt="psy photo">
+    </div>
+    <div class="col" style="text-align: left">
+
+      <h2>{{psy.name}}</h2>
+      <h1>{{psy.description}}</h1>
+    </div>
+
+    <mat-divider style="margin: 2rem 0"></mat-divider>
+
+    <button mat-flat-button color="primary" (click)="changeStatus()">
+      Change Status
+    </button>
+
+  </div>
+
+</div>

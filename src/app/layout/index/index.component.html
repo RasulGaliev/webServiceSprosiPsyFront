@@ -1,0 +1,11 @@
+<div *ngIf="isAppointmentsLoaded" class="index-page">
+  <h2>{{appointments.length}} Appointments</h2>
+
+  <mat-card class="appointment-card" *ngFor="let appointment of appointments; let i = index">
+    <mat-card-header style="text-align: left">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{appointment.date | date: 'MMMM d, hh:mm' }}</mat-card-title>
+      <mat-card-subtitle>{{appointment.psyName}}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="isPsysLoaded" class="psys-page">
+  <h2>{{psys.length}} Psys</h2>
+
+  <mat-card class="appointment-card" *ngFor="let psy of psys; let i = index">
+    <mat-card-header style="text-align: left">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{psy.name}}</mat-card-title>
+      <mat-card-subtitle>{{psy.description}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <button mat-menu-item routerLink="/admin/psy/{{psy.id}}">Go on</button>
+  </mat-card>
+</div>
