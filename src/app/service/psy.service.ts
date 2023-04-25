@@ -45,4 +45,8 @@ export class PsyService {
   deletePhoto(): Observable<any>{
     return this.http.post(PSY_API + 'deletePhoto', null)
   }
+
+  addLinkToAppointment(id: number, link: string): Observable<any>{
+    return this.http.post(PSY_API + 'appointment/' + id + '/addLink', link);
+  }
 }

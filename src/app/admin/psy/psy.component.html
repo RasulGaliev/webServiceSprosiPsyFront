@@ -12,6 +12,12 @@
       <h1>{{psy.description}}</h1>
     </div>
 
+    <div class="certificateImages" *ngFor="let certificate of psy.certificates; let i = index">
+      <div class="col">
+        <img class="certificate-image" [src]="formatImage(certificate.image)" alt="certificate image">
+      </div>
+    </div>
+
     <mat-divider style="margin: 2rem 0"></mat-divider>
 
     <button mat-flat-button color="primary" (click)="changeStatus()">

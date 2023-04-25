@@ -22,4 +22,15 @@ export class AuthService {
   public register(psy: any): Observable<any>{
     return this.http.post(AUTH_API + 'reg', psy);
   }
+
+  public createCertificate(file: File): Observable<any>{
+    const uploadData = new FormData();
+    uploadData.append('certificate', file);
+
+    return this.http.post(AUTH_API + 'createCertificate', uploadData)
+  }
+
+  public activation(code: string): Observable<any>{
+    return this.http.get(AUTH_API + 'activate/' + code);
+  }
 }

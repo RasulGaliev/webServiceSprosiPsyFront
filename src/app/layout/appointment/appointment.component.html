@@ -1,0 +1,20 @@
+<div>
+  <h2>Edit Psy Profile</h2>
+  <h2>{{appointment.date}}</h2>
+  <br>
+  <h2>{{appointment.status}}</h2>
+  <br>
+  <form [formGroup]="linkForm">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Link</mat-label>
+      <input matInput
+             formControlName="link">
+    </mat-form-field>
+
+    <div class="row">
+      <button color="primary" class="w-50" [disabled]="linkForm.invalid" (click)="submit()" mat-button disableRipple>
+        Update
+      </button>
+    </div>
+  </form>
+</div>

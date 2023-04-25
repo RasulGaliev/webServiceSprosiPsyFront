@@ -4,6 +4,7 @@ import {NotificationService} from "../../service/notification.service";
 import {PsysComponent} from "../psys/psys.component";
 import {Psychologist} from "../../models/Psychologist";
 import {ActivatedRoute} from "@angular/router";
+import {Certificate} from "../../models/Certificate";
 
 @Component({
   selector: 'app-psy',
@@ -21,6 +22,8 @@ export class PsyComponent implements OnInit{
   previewImgURL: any;
   // @ts-ignore
   psyProfileImage: File;
+  // @ts-ignore
+  certificates: Certificate[];
 
   constructor(private adminService: AdminService,
               private notificationService: NotificationService,

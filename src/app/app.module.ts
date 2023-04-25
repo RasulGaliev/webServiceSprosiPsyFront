@@ -21,6 +21,8 @@ import { ProfileComponent } from './psy/profile/profile.component';
 import { EditPsyComponent } from './psy/edit-psy/edit-psy.component';
 import { PsysComponent } from './admin/psys/psys.component';
 import { PsyComponent } from './admin/psy/psy.component';
+import { ActivationComponent } from './auth/activation/activation.component';
+import { AppointmentComponent } from './layout/appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PsyComponent } from './admin/psy/psy.component';
     ProfileComponent,
     EditPsyComponent,
     PsysComponent,
-    PsyComponent
+    PsyComponent,
+    ActivationComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,
