@@ -2,10 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from "../../service/token-storage.service";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {NotificationService} from "../../service/notification.service";
-import {Client} from "../../models/Client";
+
 import {Psychologist} from "../../models/Psychologist";
 import {PsyService} from "../../service/psy.service";
 import {EditPsyComponent} from "../edit-psy/edit-psy.component";
+import {Appointment} from "../../models/Appointment";
 
 @Component({
   selector: 'app-profile',
@@ -22,7 +23,10 @@ export class ProfileComponent implements OnInit{
   psyProfileImage: File;
   isPsyDataLoaded = false;
   previewImgURL: any;
-
+  private router: any;
+  isAppointmentsLoaded = false;
+  // @ts-ignore
+  appointments: Appointment[];
   constructor(private tokenService: TokenStorageService,
               private psyService: PsyService,
               private dialog: MatDialog,
@@ -36,6 +40,12 @@ export class ProfileComponent implements OnInit{
         this.psyProfileImage = data.photo;
         this.isPsyDataLoaded = true;
       });
+    this.psyService.getActiveAppointments()
+      .subscribe(data => {
+        console.log(data);
+        this.appointments = data;
+        this.isAppointmentsLoaded = true;
+      })
   }
 
   onFileSelected(event: any): void{
@@ -72,6 +82,10 @@ export class ProfileComponent implements OnInit{
           this.notificationService.showSnackBar('Profile Photo upload Successfully');
         })
     }
+  }
+  logout(): void {
+    this.tokenService.logOut();
+    this.router.navigate(['/login']);
   }
 
 }

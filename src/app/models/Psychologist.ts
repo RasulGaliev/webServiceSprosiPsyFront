@@ -8,6 +8,8 @@ export interface Psychologist{
   email?: string,
   estimation: number,
   description?: string,
+  sex?: string,
+  price?: number,
   status?: boolean,
   password?: string,
   confirmedPassword?: string,

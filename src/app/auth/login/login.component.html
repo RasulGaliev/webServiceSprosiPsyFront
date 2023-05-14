@@ -1,29 +1,29 @@
 <div class="login-page">
-  <h2>Login</h2>
+  <h2>Вход</h2>
   <form [formGroup]="loginForm">
     <div>
       <div class="justify-content-center">
         <div></div>
         <mat-form-field appearance="outline">
-          <mat-label>Username</mat-label>
+          <mat-label>Имя пользователя</mat-label>
           <input matInput
                  formControlName="username">
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label>Пароль</mat-label>
           <input matInput type="password"
                  formControlName="password">
         </mat-form-field>
       </div>
 
       <div id="controls" class="row">
-        <button style="width: 20%" [disabled]="loginForm.invalid" (click)="submit()" mat-flat-button color="primary">
-          Login
+        <button style="color:#28a1be; width: 20%" [disabled]="loginForm.invalid" (click)="submit()" mat-flat-button >
+          Войти
         </button>
 
-        <a routerLink="/register">Register</a>
+        <a style="color: #52ADCA" routerLink="/register">Зарегистрироваться</a>
       </div>
     </div>
   </form>

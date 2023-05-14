@@ -6,3 +6,14 @@
 mat-form-field {
   width: 50%;
 }
+
+.certificate {
+  width: 200px;
+  height: 200px;
+}
+
+/*.register_button {*/
+/*  width: 5rem;*/
+/*  background: #28a1be;*/
+/*  margin-bottom: 200px;*/
+/*}*/

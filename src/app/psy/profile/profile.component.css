@@ -1,17 +1,25 @@
-.psy-profile {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
-  text-align: center;
-  padding-top: 3rem;
-}
-
 .profile-image {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.logout {
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-resolution: 150dpi), screen and (max-width: 900px) {
+  .profile {
+    display: block;
+  }
 }

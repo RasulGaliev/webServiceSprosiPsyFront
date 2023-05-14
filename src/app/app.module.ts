@@ -23,6 +23,10 @@ import { PsysComponent } from './admin/psys/psys.component';
 import { PsyComponent } from './admin/psy/psy.component';
 import { ActivationComponent } from './auth/activation/activation.component';
 import { AppointmentComponent } from './layout/appointment/appointment.component';
+import {HeaderComponent} from "./layout/header/header.component";
+import {HomeComponent} from "./layout/home/home.component";
+import {AboutComponent} from "./information/about/about.component";
+import {ContactsComponent} from "./information/contacts/contacts.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { AppointmentComponent } from './layout/appointment/appointment.component
     PsysComponent,
     PsyComponent,
     ActivationComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

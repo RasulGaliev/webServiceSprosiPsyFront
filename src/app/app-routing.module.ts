@@ -9,19 +9,18 @@ import {PsysComponent} from "./admin/psys/psys.component";
 import {PsyComponent} from "./admin/psy/psy.component";
 import {ActivationComponent} from "./auth/activation/activation.component";
 import {AppointmentComponent} from "./layout/appointment/appointment.component";
+import {HomeComponent} from "./layout/home/home.component";
+import {AboutComponent} from "./information/about/about.component";
+import {ContactsComponent} from "./information/contacts/contacts.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'activate/:code', component: ActivationComponent},
-  {path: 'main', component: IndexComponent, canActivate: [AuthGuardService]},
-  {
-    path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]
-    // children: [
-    //   {path: '', component: ClientAppointmentsComponent, canActivate: [AuthGuardService]},
-    //   {path: 'finishedApps', component: FinishedAppointmentsComponent, canActivate: [AuthGuardService]}
-    // ]
-  },
+  {path: 'main', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'contacts', component: ContactsComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
   {path: 'admin', component: PsysComponent, canActivate: [AuthGuardService]},
   {path: 'admin/psy/:id', component: PsyComponent, canActivate: [AuthGuardService]},
   {path: 'appointment/:id', component: AppointmentComponent, canActivate: [AuthGuardService]},

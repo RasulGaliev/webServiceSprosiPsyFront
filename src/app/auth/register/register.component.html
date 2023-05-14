@@ -1,24 +1,38 @@
 <div class="register-page">
-  <h2>Register</h2>
-  <p>Already have an account?  <a routerLink="/login">Sign in</a></p>
+  <h2>Регистрация</h2>
+  <p>Уже зарегистрировались?  <a style="color: #52ADCA" routerLink="/login">Войти</a></p>
   <form [formGroup]="registerForm">
     <div class="justify-content-center">
       <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
+        <mat-label>Имя</mat-label>
         <input matInput
                formControlName="name">
       </mat-form-field>
     </div>
     <div class="justify-content-center">
       <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
+        <mat-label>Почта</mat-label>
         <input matInput
                formControlName="email">
       </mat-form-field>
     </div>
     <div class="justify-content-center">
       <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
+        <mat-label>Пол</mat-label>
+        <input matInput
+               formControlName="sex">
+      </mat-form-field>
+    </div>
+    <div class="justify-content-center">
+      <mat-form-field appearance="outline">
+        <mat-label>Цена</mat-label>
+        <input matInput
+               formControlName="price">
+      </mat-form-field>
+    </div>
+    <div class="justify-content-center">
+      <mat-form-field appearance="outline">
+        <mat-label>Пароль</mat-label>
         <input type="password" matInput
                formControlName="password">
       </mat-form-field>
@@ -26,7 +40,7 @@
 
     <div class="justify-content-center">
       <mat-form-field appearance="outline">
-        <mat-label>Confirmed Password</mat-label>
+        <mat-label>Повторите пароль</mat-label>
         <input type="password" matInput
                formControlName="confirmedPassword">
       </mat-form-field>
@@ -34,26 +48,28 @@
 
     <div class="justify-content-center">
       <mat-form-field appearance="outline">
-        <mat-label>Description</mat-label>
+        <mat-label>Описание</mat-label>
         <input matInput
                formControlName="description">
       </mat-form-field>
     </div>
 
     <div class="col">
-      <img class="profile-image" [src]="previewImgURL || 'https://png.pngtree.com/png-clipart/20201208/original/pngtree-cartoon-family-avatar-face-picture-kid-png-image_5519203.jpg'" alt="psy photo">
+      <img class="certificate" [src]="previewImgURL || 'https://png.pngtree.com/png-clipart/20201208/original/pngtree-cartoon-family-avatar-face-picture-kid-png-image_5519203.jpg'" alt="psy photo">
 
       <input type="file"
              style="display: none"
              #fileInput
              (change)="onFileSelected($event)">
 
-      <button mat-button (click)="fileInput.click()">Pick File</button>
-      <button mat-button *ngIf="selectedFile" (click)="onUpload()">Upload</button>
+      <div>
+        <button mat-button (click)="fileInput.click()">Выберите файл</button>
+        <button mat-button *ngIf="selectedFile" (click)="onUpload()">Загрузить</button>
+      </div>
     </div>
 
-    <button style="width: 5rem" [disabled]="registerForm.invalid" (click)="submit()" mat-flat-button color="primary">
-      Register
+    <button style="width: 15rem; background: #28a1be; margin-bottom: 200px"  [disabled]="registerForm.invalid" (click)="submit()" mat-flat-button >
+      Зарегистрироваться
     </button>
 
   </form>
