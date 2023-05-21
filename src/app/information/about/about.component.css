@@ -1,0 +1,43 @@
+.about-image {
+  width: 550px;
+  margin-top: 50px;
+}
+
+.about-text {
+  margin: 150px 40px 0 0;
+  line-height: 2;
+}
+
+.about-font {
+  font-size: 24px;
+}
+.about-font-header {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1500px){
+  .about-font {
+    font-size: 20px;
+  }
+  .about-image {
+    width: 380px;
+    margin-top: 0;
+  }
+  .about-text {
+    margin: 100px 20px 0 0;
+    line-height: 2;
+  }
+  .about-font-header {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (min-resolution: 150dpi), screen and (max-width: 900px) {
+  .about-image {
+    display: none;
+  }
+}

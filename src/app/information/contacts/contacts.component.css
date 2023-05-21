@@ -1,0 +1,43 @@
+.contact-image {
+  width: 600px;
+  margin-left: 40px;
+}
+
+.contacts {
+  margin-right: 120px;
+  font-size: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-text {
+  margin: 13px 0 0 10px;
+  font-size: 24px;
+  line-height: 2.2;
+}
+
+.contact-icon {
+  width: 20px
+}
+@media screen and (min-width: 900px) and (max-width: 1500px){
+  .contact-image {
+    width: 380px;
+    margin-left: 40px;
+  }
+  .contact-text {
+    font-size: 16px;
+    line-height: 1.6
+  }
+  .contacts {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (min-resolution: 150dpi), screen and (max-width: 900px) {
+  .contact-image {
+    display: none;
+  }
+}

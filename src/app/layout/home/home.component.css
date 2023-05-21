@@ -1,7 +1,9 @@
 
 .home_intro_inner   {
+
+
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
 }
 
@@ -10,6 +12,7 @@
   /*margin: 180px 0;*/
   font-weight: bold;
   font-size: 36px;
+  text-align: center;
   /*color: #1A1A1A;*/
   line-height: 1.5;
 }
@@ -24,7 +27,7 @@
 }
 
 .intro_titles {
-  margin: 240px 0;
+  margin: 150px 0;
 }
 
 .main_button:hover {
@@ -33,6 +36,7 @@
 
 .main_image {
   z-index: 10000;
+  margin-top: 120px;
   background: center no-repeat;
   /*url('./assets/images/main_image.jpg')*/
   width: 550px;
@@ -40,7 +44,7 @@
 }
 
 .main_button {
-  background: #52ADCA;
+  background: #28a1be;
   width: 280px;
   height: 50px;
   border-radius: 18px;
@@ -67,8 +71,9 @@
 
 @media screen and (min-width: 900px) and (max-width: 1500px){
   .main_image {
-    width: 390px;
-    height: 300px;
+    width: 330px;
+    margin-top: 0;
+    /*height: 250px;*/
   }
   .main_button, .main_button2{
     width: 200px;

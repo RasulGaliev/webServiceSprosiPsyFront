@@ -55,7 +55,7 @@ h2 {
 
 @media screen and (min-width: 768px) and (max-width: 1500px){
   body {
-    max-width: 780px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
     font-size: 14px;
@@ -72,7 +72,10 @@ h2 {
     line-height:25px !important;
   }
 }
-
+body {
+  background: #dce2ec;
+  /*url("./assets/images/background.jpg");*/
+}
 @media screen and (min-resolution: 150dpi), screen and (max-width: 900px) {
   body {
     max-width: 500px;
