@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../service/auth.service";
 import {NotificationService} from "../../service/notification.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,8 @@ export class RegisterComponent {
   constructor(
     private authService: AuthService,
     private notificationService: NotificationService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
   }
 
@@ -86,6 +88,9 @@ export class RegisterComponent {
           this.notificationService.showSnackBar('Certificate successful added');
         })
     }
+  }
+  navigateToLogIn(): void {
+    this.router.navigate(['/login']);
   }
 }
 

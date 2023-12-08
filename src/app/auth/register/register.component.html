@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <button style="width: 15rem; background: #28a1be; margin-bottom: 200px"  [disabled]="registerForm.invalid" (click)="submit()" mat-flat-button >
+    <button style="width: 15rem; background: #28a1be; margin-bottom: 200px"  [disabled]="registerForm.invalid" (click)="submit(); navigateToLogIn()" mat-flat-button >
       Зарегистрироваться
     </button>
 
